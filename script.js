@@ -1,102 +1,60 @@
+// MOBILE NAVIGATION
 
-// NEXORA WEBSITE INTERACTIONS
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-// Navigation links
+menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+});
 
-const navLinks = document.querySelectorAll(".nav-links a");
+// CLOSE MENU AFTER CLICKING A LINK
 
-navLinks.forEach(link => {
-    link.addEventListener("click", () => {
+const navigationLinks = navLinks.querySelectorAll("a");
 
-        navLinks.forEach(item => {
-            item.classList.remove("active");
-        });
-
-        link.classList.add("active");
+navigationLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
     });
 });
 
+// RESERVATION FORM
 
-// Reveal sections when scrolling
+const reservationForm = document.getElementById("reservationForm");
+const formMessage = document.getElementById("formMessage");
+const reservationDate = document.getElementById("reservationDate");
 
-const sections = document.querySelectorAll(
-    ".services, .work, .contact"
-);
+// PREVENT PAST DATES
 
-const observer = new IntersectionObserver(entries => {
+const today = new Date();
+const localToday = new Date(
+    today.getTime() - today.getTimezoneOffset() * 60000
+).toISOString().split("T")[0];
 
-    entries.forEach(entry => {
+reservationDate.min = localToday;
 
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
+// HANDLE FORM SUBMISSION
 
-    });
+reservationForm.addEventListener("submit", function (event) {
 
-}, {
-    threshold: 0.15
+    event.preventDefault();
+
+    const name = document.getElementById("customerName").value.trim();
+    const email = document.getElementById("customerEmail").value.trim();
+    const date = reservationDate.value;
+    const guests = document.getElementById("guestCount").value;
+
+    if (!name || !email || !date || !guests) {
+        formMessage.textContent = "Please complete all fields.";
+        return;
+    }
+
+    formMessage.textContent =
+        "Thank you, " + name +
+        "! Your demo reservation request has been recorded on this page. No booking has been sent to a restaurant.";
+
+    reservationForm.reset();
+
+    // RESTORE THE MINIMUM DATE
+
+    reservationDate.min = localToday;
 });
-
-sections.forEach(section => {
-    observer.observe(section);
-});
-
-
-// Current year in footer
-
-const year = new Date().getFullYear();
-
-const footerText = document.querySelector("footer p");
-
-if (footerText) {
-    footerText.textContent =
-        `© ${year} NEXORA. Portfolio concept.`;
-}
-
-
-// CLIENT ENQUIRY FORM
-
-const enquiryForm = document.getElementById("enquiry-form");
-
-if (enquiryForm) {
-
-    enquiryForm.addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-        const name = document.getElementById("client-name").value.trim();
-
-        const business = document.getElementById("business-name").value.trim();
-
-        const email = document.getElementById("client-email").value.trim();
-
-        const type = document.getElementById("website-type").value;
-
-        const details = document.getElementById("project-details").value.trim();
-
-        const subject = encodeURIComponent(
-            "New NEXORA Project Enquiry"
-        );
-
-        const message = encodeURIComponent(
-            "NEW PROJECT ENQUIRY\n\n" +
-            "Name: " + name + "\n" +
-            "Business: " + business + "\n" +
-            "Email: " + email + "\n" +
-            "Website Type: " + type + "\n\n" +
-            "Project Details:\n" + details
-        );
-
-        const gmailURL =
-            "https://mail.google.com/mail/?view=cm&fs=1" +
-            "&to=a.muhammadchauhdary@gmail.com" +
-            "&su=" + subject +
-            "&body=" + message;
-
-        window.open(gmailURL, "_blank");
-
-    });
-
-}
-
-console.log("NEXORA is online.");

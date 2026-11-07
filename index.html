@@ -1,197 +1,280 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXORA | We Build. You Grow.</title>
+    <meta name="description" content="Aurelia Restaurant - Fine dining, exceptional flavours and unforgettable experiences.">
+    <title>AURELIA | Fine Dining</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- NAVIGATION -->
-    <header>
-        <nav class="navbar">
-            <a href="#home" class="logo">NEXORA<span>.</span></a>
+    <header class="navbar">
+        <a href="#home" class="logo">AURELIA<span>.</span></a>
 
-            <div class="nav-links">
-                <a href="#home" class="active">Home</a>
-                <a href="#services">Services</a>
-                <a href="#work">Our Work</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <nav id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">Our Story</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            <a href="#reservation" class="nav-button">Reserve a Table</a>
         </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <p class="tag">DIGITAL SOLUTIONS FOR MODERN BUSINESSES</p>
+    <!-- HERO SECTION -->
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
 
-        <h1>We Build.<br><span>You Grow.</span></h1>
+            <div class="hero-content">
+                <p class="eyebrow">AN EXPERIENCE BEYOND DINING</p>
 
-        <p class="hero-text">
-            We create premium websites that help businesses
-            build their online presence and reach more customers.
-        </p>
+                <h1>Where Every<br>Moment Becomes <span>Art.</span></h1>
 
-        <a href="#services" class="btn">Explore Our Services</a>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="services" id="services">
-        <p class="tag">WHAT WE DO</p>
-        <h2>Our Services</h2>
-
-        <div class="service-container">
-
-            <div class="service-card">
-                <h3>Website Development</h3>
-                <p>
-                    Modern, professional websites designed
-                    to represent your business online.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <h3>Responsive Design</h3>
-                <p>
-                    Websites designed to work smoothly
-                    on computers, tablets and mobile phones.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <h3>Website Maintenance</h3>
-                <p>
-                    Updates, improvements and ongoing
-                    support to keep your website current.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- HOW WE WORK -->
-    <section class="process">
-        <p class="tag">OUR APPROACH</p>
-        <h2>How We Work</h2>
-
-        <div class="service-container">
-
-            <div class="service-card">
-                <h3>01. Discover</h3>
-                <p>
-                    We understand your business and
-                    what you want your website to achieve.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <h3>02. Design</h3>
-                <p>
-                    We plan a clean and professional
-                    website that represents your brand.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <h3>03. Develop</h3>
-                <p>
-                    We build, test and prepare your
-                    website for launch.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section class="work" id="work">
-        <p class="tag">OUR PORTFOLIO</p>
-        <h2>Selected Work</h2>
-
-        <div class="project-card">
-            <div class="project-info">
-                <p class="tag">CONCEPT PROJECT · NOT A REAL CLIENT</p>
-
-                <h3>AURELIA</h3>
-
-                <p>
-                    A premium restaurant website concept
-                    designed to showcase a modern dining brand.
+                <p class="hero-description">
+                    Discover exceptional flavours, beautiful surroundings
+                    and unforgettable dining experiences.
                 </p>
 
-                <a href="../index.html" target="_blank" class="btn">
-                    View Demo
-                </a>
+                <div class="hero-buttons">
+                    <a href="#menu" class="button button-gold">Explore Our Menu</a>
+                    <a href="#about" class="button button-outline">Discover Our Story</a>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
+            <div class="hero-bottom">
+                <span>EST. 2026</span>
+                <span>FINE DINING · EXCEPTIONAL TASTE</span>
+            </div>
+        </section>
 
-        <p class="tag">LET'S BUILD SOMETHING</p>
+        <!-- ABOUT SECTION -->
+        <section class="about section" id="about">
+            <div class="about-image">
+                <img
+                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
+                    alt="Elegant restaurant dining table">
+            </div>
 
-        <h2>Have a Project in Mind?</h2>
+            <div class="about-content">
+                <p class="eyebrow">OUR PHILOSOPHY</p>
 
-        <p>Tell us what you're looking to build.</p>
+                <h2>More Than Food.<br><span>A Feeling.</span></h2>
 
-        <form id="enquiry-form">
+                <p>
+                    At Aurelia, we believe dining should be an experience
+                    worth remembering. Every dish is thoughtfully prepared
+                    using carefully selected ingredients.
+                </p>
 
-            <input
-                type="text"
-                id="client-name"
-                placeholder="Your Name"
-                required
-            >
+                <p>
+                    From the first welcome to the final course, we bring
+                    together flavour, atmosphere and hospitality.
+                </p>
 
-            <input
-                type="text"
-                id="business-name"
-                placeholder="Business Name"
-                required
-            >
+                <a href="#menu" class="text-link">DISCOVER OUR MENU →</a>
+            </div>
+        </section>
 
-            <input
-                type="email"
-                id="client-email"
-                placeholder="Your Email Address"
-                required
-            >
+        <!-- MENU SECTION -->
+        <section class="menu-section section" id="menu">
+            <div class="section-heading">
+                <p class="eyebrow">A TASTE OF AURELIA</p>
+                <h2>Our Signature <span>Menu</span></h2>
+                <p>Thoughtfully prepared. Beautifully presented.</p>
+            </div>
 
-            <select id="website-type" required>
-                <option value="">Select Website Type</option>
-                <option value="Restaurant Website">Restaurant Website</option>
-                <option value="Business Website">Business Website</option>
-                <option value="Portfolio Website">Portfolio Website</option>
-                <option value="Other">Other</option>
-            </select>
+            <div class="menu-grid">
 
-            <textarea
-                id="project-details"
-                placeholder="Tell us about your project..."
-                rows="5"
-                required
-            ></textarea>
+                <article class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=700&q=85" alt="Gourmet roasted vegetables">
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <h3>Garden Elegance</h3>
+                            <span>38 AED</span>
+                        </div>
+                        <p>Fresh seasonal vegetables with delicate herbs.</p>
+                    </div>
+                </article>
 
-            <button type="submit" class="btn">
-                Send Enquiry
-            </button>
+                <article class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85" alt="Grilled steak">
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <h3>Royal Steak</h3>
+                            <span>85 AED</span>
+                        </div>
+                        <p>Grilled steak with signature house seasoning.</p>
+                    </div>
+                </article>
 
-        </form>
+                <article class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=85" alt="Fresh pasta">
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <h3>Truffle Pasta</h3>
+                            <span>56 AED</span>
+                        </div>
+                        <p>Handcrafted pasta with a creamy truffle sauce.</p>
+                    </div>
+                </article>
 
-    </section>
+                <article class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=85" alt="Freshly baked pizza">
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <h3>Signature Pizza</h3>
+                            <span>49 AED</span>
+                        </div>
+                        <p>Stone-baked pizza with fresh ingredients.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=85" alt="Dessert">
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <h3>Golden Dessert</h3>
+                            <span>32 AED</span>
+                        </div>
+                        <p>A delicate sweet finish to your experience.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?auto=format&fit=crop&w=700&q=85" alt="Refreshing drink">
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <h3>Summer Elixir</h3>
+                            <span>24 AED</span>
+                        </div>
+                        <p>A refreshing blend of fruit and natural flavours.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section class="gallery-section section" id="gallery">
+            <div class="section-heading">
+                <p class="eyebrow">THE AURELIA EXPERIENCE</p>
+                <h2>Moments Worth <span>Savouring</span></h2>
+            </div>
+
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85" alt="Restaurant interior">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85" alt="Fine dining table">
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=85" alt="Restaurant atmosphere">
+            </div>
+        </section>
+
+        <!-- RESERVATION SECTION -->
+        <section class="reservation section" id="reservation">
+            <div class="reservation-content">
+                <p class="eyebrow">YOUR TABLE AWAITS</p>
+                <h2>Make It a <span>Moment.</span></h2>
+                <p>Plan your next memorable dining experience with us.</p>
+
+                <form id="reservationForm">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customerName">Your Name</label>
+                            <input type="text" id="customerName" placeholder="Full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerEmail">Email Address</label>
+                            <input type="email" id="customerEmail" placeholder="Email address" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reservationDate">Date</label>
+                            <input type="date" id="reservationDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guestCount">Guests</label>
+                            <select id="guestCount" required>
+                                <option value="1">1 Guest</option>
+                                <option value="2" selected>2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6 Guests</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="button button-gold full-button">
+                        Request Reservation
+                    </button>
+
+                    <p id="formMessage" class="form-message" role="status"></p>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact section" id="contact">
+            <div class="section-heading">
+                <p class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</p>
+                <h2>Visit <span>Aurelia</span></h2>
+            </div>
+
+            <div class="contact-grid">
+                <div>
+                    <h3>Location</h3>
+                    <p>Dubai, United Arab Emirates</p>
+                </div>
+
+                <div>
+                    <h3>Opening Hours</h3>
+                    <p>Monday – Sunday</p>
+                    <p>12:00 PM – 11:00 PM</p>
+                </div>
+
+                <div>
+                    <h3>Contact</h3>
+                    <p>hello@aurelia.example</p>
+                    <p>+971 50 000 0000</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer>
-        <h2>NEXORA<span>.</span></h2>
-        <p>© 2026 NEXORA. Portfolio concept.</p>
-        <p>We Build. You Grow.</p>
+    <footer class="footer">
+        <a href="#home" class="logo">AURELIA<span>.</span></a>
+        <p>Exceptional dining. Unforgettable moments.</p>
+        <p class="copyright">© 2026 AURELIA. DEMO WEBSITE BY NEXORA.</p>
     </footer>
 
     <script src="script.js"></script>
-
+     <a
+      href="https://wa.me/971500000000"
+      class="whatsapp-button"
+      target="_blank"
+      rel="noopener"
+      aria-label="Contact us on WhatsApp"
+    >
+      WhatsApp
+    </a>
 </body>
 </html>
