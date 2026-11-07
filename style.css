@@ -1,0 +1,327 @@
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0c10;
+    color: #f5f2eb;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+:root {
+    --gold: #c6a15b;
+    --dark: #0b0c10;
+}
+
+/* NAVIGATION */
+
+header {
+    background: #101116;
+    border-bottom: 1px solid #292929;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo span,
+footer span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    padding: 150px 8%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 85px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero-text {
+    color: #aaa;
+    max-width: 580px;
+    margin-bottom: 35px;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #111;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e0bd78;
+    transform: translateY(-3px);
+}
+
+/* SECTION HEADINGS */
+
+section h2 {
+    font-size: 38px;
+    margin-bottom: 35px;
+}
+
+/* SERVICES */
+
+.services,
+.process,
+.work,
+.contact {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.service-card {
+    background: #13151c;
+    border: 1px solid #292929;
+    padding: 35px 25px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: var(--gold);
+    margin-bottom: 15px;
+    font-size: 19px;
+}
+
+.service-card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* PROCESS */
+
+.process {
+    background: #101116;
+}
+
+/* PORTFOLIO */
+
+.project-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 65px 35px;
+    background: linear-gradient(135deg, #17191f, #252016);
+    border: 1px solid #39332a;
+}
+
+.project-info h3 {
+    font-size: 45px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.project-info p:not(.tag) {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #101116;
+}
+
+.contact > p:not(.tag) {
+    color: #aaa;
+}
+
+#enquiry-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#enquiry-form input,
+#enquiry-form select,
+#enquiry-form textarea {
+    width: 100%;
+    padding: 16px;
+    background: #111218;
+    border: 1px solid #393939;
+    color: #f5f2eb;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+    border-radius: 4px;
+}
+
+#enquiry-form input:focus,
+#enquiry-form select:focus,
+#enquiry-form textarea:focus {
+    border-color: var(--gold);
+}
+
+#enquiry-form textarea {
+    resize: vertical;
+}
+
+#enquiry-form select {
+    color: #aaa;
+}
+
+#enquiry-form .btn {
+    border: none;
+    cursor: pointer;
+    align-self: center;
+}
+
+/* FOOTER */
+
+footer {
+    background: #08090c;
+    text-align: center;
+    padding: 45px 20px;
+    border-top: 1px solid #292929;
+}
+
+footer h2 {
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #777;
+    font-size: 13px;
+}
+
+/* ANIMATIONS */
+
+.services,
+.work,
+.contact {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.services.visible,
+.work.visible,
+.contact.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 100px 6%;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services,
+    .process,
+    .work,
+    .contact {
+        padding: 70px 6%;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    .project-info h3 {
+        font-size: 35px;
+    }
+}
