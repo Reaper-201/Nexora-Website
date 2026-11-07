@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aurelia Restaurant - Fine dining, exceptional flavours and unforgettable experiences.">
+    <title>AURELIA | Fine Dining</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="#home" class="logo">AURELIA<span>.</span></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <nav id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">Our Story</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            <a href="#reservation" class="nav-button">Reserve a Table</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <p class="eyebrow">AN EXPERIENCE BEYOND DINING</p>
+
+                <h1>Where Every<br>Moment Becomes <span>Art.</span></h1>
+
+                <p class="hero-description">
+                    Discover exceptional flavours, beautiful surroundings
+                    and unforgettable dining experiences.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#menu" class="button button-gold">Explore Our Menu</a>
+                    <a href="#about" class="button button-outline">Discover Our Story</a>
+                </div>
+            </div>
+
+            <div class="hero-bottom">
+                <span>EST. 2026</span>
+                <span>FINE DINING · EXCEPTIONAL TASTE</span>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about section" id="about">
+            <div class="about-image">
+                <img
+                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
+                    alt="Elegant restaurant dining table">
+            </div>
+
+            <div class="about-content">
+                <p class="eyebrow">OUR PHILOSOPHY</p>
+
+                <h2>More Than Food.<br><span>A Feeling.</span></h2>
+
+                <p>
+                    At Aurelia, we believe dining should be an experience
+                    worth remembering. Every dish is thoughtfully prepared
+                    using carefully selected ingredients.
+                </p>
+
+                <p>
+                    From the first welcome to the final course, we bring
+                    together flavour, atmosphere and hospitality.
+                </p>
+
+                <a href="#menu" class="text-link">DISCOVER OUR MENU →</a>
+            </div>
+        </section>
+
+        <!-- MENU SECTION -->
+        <section class="menu-section section" id="menu">
+            <div class="section-heading">
+                <p class="eyebrow">A TASTE OF AURELIA</p>
+                <h2>Our Signature <span>Menu</span></h2>
+                <p>Thoughtfully prepared. Beautifully presented.</p>
+            </div>
+
+            <div class="menu-grid">
+
+                <article class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=700&q=85" alt="Gourmet roasted vegetables">
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <h3>Garden Elegance</h3>
+                            <span>38 AED</span>
+                        </div>
+                        <p>Fresh seasonal vegetables with delicate herbs.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85" alt="Grilled steak">
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <h3>Royal Steak</h3>
+                            <span>85 AED</span>
+                        </div>
+                        <p>Grilled steak with signature house seasoning.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=85" alt="Fresh pasta">
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <h3>Truffle Pasta</h3>
+                            <span>56 AED</span>
+                        </div>
+                        <p>Handcrafted pasta with a creamy truffle sauce.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=85" alt="Freshly baked pizza">
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <h3>Signature Pizza</h3>
+                            <span>49 AED</span>
+                        </div>
+                        <p>Stone-baked pizza with fresh ingredients.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=85" alt="Dessert">
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <h3>Golden Dessert</h3>
+                            <span>32 AED</span>
+                        </div>
+                        <p>A delicate sweet finish to your experience.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?auto=format&fit=crop&w=700&q=85" alt="Refreshing drink">
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <h3>Summer Elixir</h3>
+                            <span>24 AED</span>
+                        </div>
+                        <p>A refreshing blend of fruit and natural flavours.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section class="gallery-section section" id="gallery">
+            <div class="section-heading">
+                <p class="eyebrow">THE AURELIA EXPERIENCE</p>
+                <h2>Moments Worth <span>Savouring</span></h2>
+            </div>
+
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85" alt="Restaurant interior">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85" alt="Fine dining table">
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=85" alt="Restaurant atmosphere">
+            </div>
+        </section>
+
+        <!-- RESERVATION SECTION -->
+        <section class="reservation section" id="reservation">
+            <div class="reservation-content">
+                <p class="eyebrow">YOUR TABLE AWAITS</p>
+                <h2>Make It a <span>Moment.</span></h2>
+                <p>Plan your next memorable dining experience with us.</p>
+
+                <form id="reservationForm">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customerName">Your Name</label>
+                            <input type="text" id="customerName" placeholder="Full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerEmail">Email Address</label>
+                            <input type="email" id="customerEmail" placeholder="Email address" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reservationDate">Date</label>
+                            <input type="date" id="reservationDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guestCount">Guests</label>
+                            <select id="guestCount" required>
+                                <option value="1">1 Guest</option>
+                                <option value="2" selected>2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6 Guests</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="button button-gold full-button">
+                        Request Reservation
+                    </button>
+
+                    <p id="formMessage" class="form-message" role="status"></p>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact section" id="contact">
+            <div class="section-heading">
+                <p class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</p>
+                <h2>Visit <span>Aurelia</span></h2>
+            </div>
+
+            <div class="contact-grid">
+                <div>
+                    <h3>Location</h3>
+                    <p>Dubai, United Arab Emirates</p>
+                </div>
+
+                <div>
+                    <h3>Opening Hours</h3>
+                    <p>Monday – Sunday</p>
+                    <p>12:00 PM – 11:00 PM</p>
+                </div>
+
+                <div>
+                    <h3>Contact</h3>
+                    <p>hello@aurelia.example</p>
+                    <p>+971 50 000 0000</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#home" class="logo">AURELIA<span>.</span></a>
+        <p>Exceptional dining. Unforgettable moments.</p>
+        <p class="copyright">© 2026 AURELIA. DEMO WEBSITE BY NEXORA.</p>
+    </footer>
+
+    <script src="script.js"></script>
+     <a
+      href="https://wa.me/971500000000"
+      class="whatsapp-button"
+      target="_blank"
+      rel="noopener"
+      aria-label="Contact us on WhatsApp"
+    >
+      WhatsApp
+    </a>
+</body>
+</html>
